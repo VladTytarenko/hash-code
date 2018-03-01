@@ -35,6 +35,7 @@ public class FileScanner {
                         sc.nextInt()), sc.nextInt(), sc.nextInt()));
             }
             sc.close();
+            city.setOrderList(orderList);
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();

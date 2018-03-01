@@ -7,6 +7,6 @@ public class Main {
         FileScanner fileScanner = new FileScanner("/Users/Vitaliy/IdeaProjects/hash-code/src/java/resources/a_example.in");
         City exampleCity = fileScanner.getCity();
         System.out.println(exampleCity);
-        System.out.println(exampleCity.getOrderList().size());
+        System.out.println(exampleCity.getVehicleList().size());
     }
 }
