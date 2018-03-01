@@ -1,4 +1,4 @@
-package java.com.viva.hashcode;
+package com.viva.hashcode;
 
 import java.util.ArrayList;
 import java.util.List;

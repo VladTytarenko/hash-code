@@ -1,4 +1,4 @@
-package java.com.viva.hashcode;
+package com.viva.hashcode;
 
 public class Vehicle {
     private Location currentLocation;

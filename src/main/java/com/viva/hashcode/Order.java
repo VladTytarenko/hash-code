@@ -1,7 +1,6 @@
-package java.com.viva.hashcode;
+package com.viva.hashcode;
 
 import static com.viva.hashcode.Order.StatusOrder.NOT_MAPPED;
-import static com.viva.hashcode.Order.StatusOrder.WAIT;
 
 public class Order {
     private int minStartTime;

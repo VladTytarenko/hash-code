@@ -1,9 +1,5 @@
-package java.com.viva.hashcode;
+package com.viva.hashcode;
 
-import java.com.viva.hashcode.City;
-import java.com.viva.hashcode.Location;
-import java.com.viva.hashcode.Order;
-import java.com.viva.hashcode.Vehicle;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
