@@ -1,12 +1,6 @@
 package com.viva.hashcode;
 
-<<<<<<< Updated upstream
 import static com.viva.hashcode.Order.StatusOrder.NOT_MAPPED;
-=======
-
-import static java.com.viva.hashcode.Order.StatusOrder.NOT_MAPPED;
-import static java.com.viva.hashcode.Order.StatusOrder.WAIT;
->>>>>>> Stashed changes
 
 public class Order {
     private int minStartTime;
@@ -33,8 +27,6 @@ public class Order {
 
     enum StatusOrder {
         NOT_MAPPED, WAIT, IN_PROGRES, FINISHED
-<<<<<<< Updated upstream
-=======
     }
 
     public StatusOrder getStatusOrder() {
@@ -43,6 +35,5 @@ public class Order {
 
     public void setStatusOrder(StatusOrder statusOrder) {
         this.statusOrder = statusOrder;
->>>>>>> Stashed changes
     }
 }

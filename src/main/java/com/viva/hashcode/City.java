@@ -1,4 +1,4 @@
-package java.com.viva.hashcode;
+package com.viva.hashcode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +42,17 @@ public class City {
             }
         }
         return freeVehicle;
+    }
+
+    public void setNewStatus() {
+        Location loc;
+        for (Vehicle vehicle : vehicleList) {
+            loc = vehicle.getOrder().getCurrentTaget();
+            if (vehicle.getCurrentLocation().equals(loc)) {
+                vehicle.getOrder().setStatusOrder(Order.StatusOrder.FINISHED);
+                vehicle.setOrder(null);
+            }
+        }
     }
 
     public List<Vehicle> getVehicleList() {
