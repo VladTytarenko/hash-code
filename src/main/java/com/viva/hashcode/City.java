@@ -68,6 +68,12 @@ public class City {
         return orderList;
     }
 
+    void moveVehicles() {
+        for (Vehicle vehicle : this.getVehicleList()) {
+            vehicle.move();
+        }
+    }
+
     public void setVehicleList(List<Vehicle> vehicleList) {
         this.vehicleList = vehicleList;
     }
