@@ -1,9 +1,8 @@
-package com.viva.hashcode;
+package java.com.viva.hashcode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.viva.hashcode.Order.StatusOrder.NOT_MAPPED;
 import static java.lang.Math.abs;
 
 public class City {
@@ -16,7 +15,7 @@ public class City {
         this.width = width;
         this.height = height;
         vehicleList = new ArrayList<Vehicle>();
-        for (int i = 0; i < vehicleNumber; i++) {
+        for(int i = 0; i < vehicleNumber; i++) {
             vehicleList.add(new Vehicle());
         }
         //this.orderList = orderList;
@@ -25,7 +24,7 @@ public class City {
     public City(int width, int height, int vehicleNumber, List<Order> orderList) {
         this.width = width;
         this.height = height;
-        for (int i = 0; i < vehicleNumber; i++) {
+        for(int i = 0; i < vehicleNumber; i++) {
             vehicleList.add(new Vehicle());
         }
         this.orderList = orderList;
@@ -37,41 +36,16 @@ public class City {
 
     List<Vehicle> getFreeVehicle() {
         List<Vehicle> freeVehicle = new ArrayList<Vehicle>();
-        for (int i = 0; i < vehicleList.size(); i++) {
-            if (vehicleList.get(i).getOrder() == null) {
+        for(int i = 0; i < vehicleList.size(); i ++) {
+            if(vehicleList.get(i).getOrder() == null) {
                 freeVehicle.add(vehicleList.get(i));
             }
         }
         return freeVehicle;
     }
 
-    public void mapVehiclesOrder() {
-        List<Vehicle> freeVehicles = new ArrayList<Vehicle>();
-        List<Order> freeOrders = new ArrayList<Order>();
-        for (int i = 0; i < freeVehicles.size(); i++) {
-            freeVehicles.get(i).setOrder(freeOrders.get(i));
-        }
-    }
-
     public List<Vehicle> getVehicleList() {
         return vehicleList;
-    }
-
-    public List<Order> getFreeOrderList() {
-        List<Order> freeOrders = new ArrayList<Order>();
-        for (int i = 0; i < orderList.size(); i++) {
-            if (orderList.get(i).statusOrder == NOT_MAPPED) {
-                freeOrders.add(orderList.get(i));
-            }
-        }
-
-        return orderList;
-    }
-
-    void moveVehicles() {
-        for (Vehicle vehicle : this.getVehicleList()) {
-            vehicle.move();
-        }
     }
 
     public void setVehicleList(List<Vehicle> vehicleList) {
