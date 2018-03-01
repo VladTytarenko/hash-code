@@ -1,4 +1,4 @@
-package hashcode.filescanner;
+package com.viva.hashcode;
 
 public class City {
 }

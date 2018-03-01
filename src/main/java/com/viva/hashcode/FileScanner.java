@@ -1,4 +1,4 @@
-package java.hashcode.filescanner;
+package com.viva.hashcode;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ public class FileScanner {
 
     private City city;
     private List<Order> orderList;
-    private List<Venicle> venicleList;
+    private List<Vehicle> venicleList;
     private int numOfOrders;
     private int bonus;
     private int steps;
@@ -23,7 +23,7 @@ public class FileScanner {
             if (sc.hasNextLine()) {
                 city = new City(sc.nextInt(), sc.nextInt());
                 for (int i = 0; i < sc.nextInt(); i++)
-                    venicleList.add(new Venicle(new Location(0, 0)));
+                    venicleList.add(new Vehicle(new Location(0, 0)));
                 numOfOrders = sc.nextInt();
                 bonus = sc.nextInt();
                 steps = sc.nextInt();
@@ -48,7 +48,7 @@ public class FileScanner {
         return orderList;
     }
 
-    public List<Venicle> getVenicleList() {
+    public List<Vehicle> getVenicleList() {
         return venicleList;
     }
 
