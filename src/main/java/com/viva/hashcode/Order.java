@@ -1,5 +1,6 @@
 package com.viva.hashcode;
 
+import static com.viva.hashcode.Order.StatusOrder.NOT_MAPPED;
 import static com.viva.hashcode.Order.StatusOrder.WAIT;
 
 public class Order {
@@ -14,11 +15,11 @@ public class Order {
         this.maxFinishTime = maxFinishTime;
         this.startLocation = startLocation;
         this.finishLocation = finishLocation;
-        this.statusOrder = WAIT;
+        this.statusOrder = NOT_MAPPED;
     }
 
     Location getCurrentTaget() {
-        if (statusOrder == WAIT) {
+        if (statusOrder == NOT_MAPPED) {
             return startLocation;
         } else {
             return finishLocation;
@@ -26,6 +27,6 @@ public class Order {
     }
 
     enum StatusOrder {
-        WAIT, IN_PROGRES, FINISHED
+        NOT_MAPPED, WAIT, IN_PROGRES, FINISHED
     }
 }
