@@ -1,4 +1,4 @@
-package com.viva.hashcode;
+package java.com.viva.hashcode;
 
 import static com.viva.hashcode.Order.StatusOrder.WAIT;
 
