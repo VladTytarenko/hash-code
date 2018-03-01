@@ -6,7 +6,7 @@ public class Order {
     private Location startLocation;
     private Location finishLocation;
 
-    public Order(int minStartTime, int maxFinishTime, Location startLocation, Location finishLocation) {
+    public Order(Location startLocation, Location finishLocation, int minStartTime, int maxFinishTime) {
         this.minStartTime = minStartTime;
         this.maxFinishTime = maxFinishTime;
         this.startLocation = startLocation;

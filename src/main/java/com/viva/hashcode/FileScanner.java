@@ -2,6 +2,7 @@ package com.viva.hashcode;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,18 +22,18 @@ public class FileScanner {
 
             Scanner sc = new Scanner(file);
             if (sc.hasNextLine()) {
-                city = new City(sc.nextInt(), sc.nextInt());
-                for (int i = 0; i < sc.nextInt(); i++)
-                    venicleList.add(new Vehicle(new Location(0, 0)));
+                city = new City(sc.nextInt(), sc.nextInt(), sc.nextInt());
+
                 numOfOrders = sc.nextInt();
                 bonus = sc.nextInt();
                 steps = sc.nextInt();
             }
 
-            while (sc.hasNextLine())
+            orderList = new ArrayList<Order>();
+            while (sc.hasNext()) {
                 orderList.add(new Order(new Location(sc.nextInt(), sc.nextInt()), new Location(sc.nextInt(),
                         sc.nextInt()), sc.nextInt(), sc.nextInt()));
-
+            }
             sc.close();
         }
         catch (FileNotFoundException e) {
