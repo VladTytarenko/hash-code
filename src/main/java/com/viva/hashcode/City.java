@@ -1,6 +1,4 @@
-package com.viva.hashcode;
-
-import com.sun.tools.corba.se.idl.constExpr.Or;
+package java.com.viva.hashcode;
 
 import java.util.ArrayList;
 import java.util.List;
